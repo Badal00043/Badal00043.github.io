@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badal Kumar | Electrical & AI Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #0b0e14;
+            --card-bg: #161b22;
+            --text-main: #e6edf3;
+            --text-dim: #8b949e;
+            --accent: #58a6ff; 
+            --secondary-accent: #3fb950;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
+
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.5rem 10%; background: rgba(11, 14, 20, 0.95);
+            position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid #30363d;
+        }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--accent); }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: var(--text-dim); font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+
+        header.hero {
+            height: 100vh; display: flex; flex-direction: column;
+            justify-content: center; align-items: center; text-align: center; padding: 0 10%;
+        }
+        .hero h1 { font-size: clamp(2.5rem, 8vw, 4rem); margin-bottom: 1rem; }
+        .hero h1 span { color: var(--accent); }
+        .hero p { font-size: 1.2rem; color: var(--text-dim); max-width: 700px; margin-bottom: 2rem; }
+
+        .btn {
+            padding: 0.8rem 2rem; border: 2px solid var(--accent); color: var(--accent);
+            text-decoration: none; border-radius: 6px; font-weight: 600; transition: 0.3s;
+        }
+        .btn:hover { background: var(--accent); color: var(--bg-color); }
+
+        section { padding: 100px 10% 60px; }
+        h2 { font-size: 2.5rem; margin-bottom: 3rem; text-align: center; color: var(--text-main); }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .card {
+            background: var(--card-bg); padding: 2rem; border-radius: 12px;
+            border: 1px solid #30363d; transition: 0.3s; display: flex; flex-direction: column;
+        }
+        .card:hover { transform: translateY(-5px); border-color: var(--accent); }
+
+        .tag {
+            display: inline-block; background: rgba(88, 166, 255, 0.1);
+            color: var(--accent); padding: 4px 10px; border-radius: 4px;
+            font-size: 0.75rem; font-weight: 600; margin-bottom: 1rem; align-self: flex-start;
+        }
+
+        .project-link {
+            display: block; margin-top: auto; padding-top: 1.5rem;
+            color: var(--secondary-accent); text-decoration: none; font-weight: 600;
+        }
+
+        footer {
+            text-align: center; padding: 4rem 10%; border-top: 1px solid #30363d; color: var(--text-dim);
+        }
+        .contact-icons { display: flex; justify-content: center; gap: 2rem; margin: 1.5rem 0; }
+        .contact-icons a { color: var(--text-main); font-size: 1.8rem; transition: 0.3s; }
+        .contact-icons a:hover { color: var(--accent); transform: scale(1.1); }
+
+        @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">BADAL KUMAR</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Hi, I'm <span>Badal Kumar</span></h1>
+        <p>Electrical Engineering Undergraduate at Delhi University. Specialized in AI, Embedded Systems, and Signal Processing.</p>
+        <div class="contact-icons" style="margin-bottom: 2rem;">
+            <a href="mailto:kumarbadal00043@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+918210573723" title="Phone"><i class="fas fa-phone"></i></a>
+            <a href="https://github.com/Badal00043" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/badal-kumar-513b21331/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <a href="#projects" class="btn">View My Work</a>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p>I focus on bridging the gap between hardware and intelligence. From designing smart IoT devices to training deep learning models for computer vision, I am passionate about engineering systems that solve real-world problems.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Arsenal</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Programming</h3>
+                <p>Python, C, C++, JavaScript</p>
+            </div>
+            <div class="card">
+                <h3>AI & ML</h3>
+                <p>TensorFlow, Keras, OpenCV, NLP</p>
+            </div>
+            <div class="card">
+                <h3>Electrical / IoT</h3>
+                <p>Arduino, ESP8266, IoT Protocols, MATLAB, LTspice, HFSS</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <span class="tag">AI / IoT</span>
+                <h3>AirPulse Platform</h3>
+                <p>Top 15 Hack-4-Viksit-Bharat. AI dashboard for real-time monitoring and predictive analysis of urban air pollution.</p>
+                <a href="https://air-pulse-umber.vercel.app/" class="project-link" target="_blank">View Live Demo &rarr;</a>
+            </div>
+
+            <div class="card">
+                <span class="tag">IoT / Hardware</span>
+                <h3>Smart Extension Board</h3>
+                <p>Intelligent IoT board with remote monitoring, current sensing, and automatic cutoff for over-current protection.</p>
+            </div>
+
+            <div class="card">
+                <span class="tag">Computer Vision</span>
+                <h3>Pashu Pehchan</h3>
+                <p>Developed CNN models to classify indigenous cattle and buffalo breeds of India.</p>
+                <a href="https://pashu-pehchan.netlify.app/" class="project-link" target="_blank">View Live Demo &rarr;</a>
+            </div>
+
+            <div class="card">
+                <span class="tag">Machine Learning</span>
+                <h3>Crop Recommendation System</h3>
+                <p>Soil and environmental parameter-based system for optimizing yield using ML predictive models.</p>
+                <a href="https://khetilabs-krishi-sahyogi.netlify.app/" class="project-link" target="_blank">View Live Demo &rarr;</a>
+            </div>
+
+            <div class="card">
+                <span class="tag">Signal Processing</span>
+                <h3>Active Noise Cancellation</h3>
+                <p>Implemented noise reduction using adaptive filtering and signal processing techniques.</p>
+            </div>
+
+            <div class="card">
+                <span class="tag">Hardware / RF</span>
+                <h3>Antenna Design (HFSS)</h3>
+                <p>Designed and simulated antennas using ANSYS HFSS, analyzing return loss and radiation patterns.</p>
+            </div>
+
+            <div class="card">
+                <span class="tag">NLP</span>
+                <h3>Spam Mail Detection</h3>
+                <p>Automated classification system using NLP techniques (TF-IDF) and Naive Bayes/SVM models.</p>
+            </div>
+
+            <div class="card">
+                <span class="tag">Web Development</span>
+                <h3>Personal Portfolio</h3>
+                <p>Responsive website designed to showcase projects, optimized for performance and SEO.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Generative AI with Google</h3>
+                <p>Google</p>
+            </div>
+            <div class="card">
+                <h3>UI and UX Design</h3>
+                <p>Tata Forage</p>
+            </div>
+            <div class="card">
+                <h3>AWS Cloud Practitioner</h3>
+                <p>Tata Forage</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="contact-icons">
+            <a href="https://github.com/Badal00043" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/badal-kumar-513b21331/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:kumarbadal00043@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+918210573723" title="Call Me"><i class="fas fa-phone"></i></a>
+        </div>
+        <p>Badal Kumar | Delhi, India</p>
+        <p style="margin-top: 10px; font-size: 0.8rem;">&copy; 2026 Built with ❤️</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Navbar scroll shadow
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) { nav.style.boxShadow = '0 10px 30px -10px rgba(0,0,0,0.5)'; } 
+            else { nav.style.boxShadow = 'none'; }
+        });
+    </script>
+</body>
+</html>
